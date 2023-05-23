@@ -1,10 +1,11 @@
+def identical(l,s,n):
+    for i in range(n,0,-1):
+        if(s%i==0):
+            return i
+    else:
+        return 0
+
 n=int(input())
-arr=list(map(int,input().split()))
-s=0
-l=[]
-for i in arr:
-    s+=i
-for i in arr:
-    if(s%i==0):
-        l.append(i)
-print(max(l))
+l=list(map(int,input().split()))
+s=sum(l)
+print(identical(l,s,n))
